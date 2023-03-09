@@ -1,0 +1,589 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px; 
+}
+html{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: var(--lightcolor);
+}
+:root{
+    --primarycolor :#ff274b;
+    --lightcolor: #ffffff;
+    --bgcolor1: #0C0518;
+    --bgcolor2: #201e31;
+    --padding: 8%;
+}
+span{
+    color: var(--primarycolor);
+}
+.full-stck{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+p{
+    color:var(--header-color);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem; 
+    font-weight:bold ;
+}
+h5{
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+h1{
+    font-size: 4.65rem;
+    margin: 1.7rem 0;
+}
+h3{
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    font-weight: 400;
+}
+h2{
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+nav{
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding); 
+    display: flex;
+    justify-content: space-between;
+    
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+    font-weight:600;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--lightcolor);
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+nav ul li a:hover{
+    color: var(--primarycolor);
+}
+/***********************************************************
+***********************************HOM SECTİON
+*************************************************************/
+.home{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgcolor1);
+  display: flex;
+  flex-direction: column;
+}
+.basem{
+  color: var(--primarycolor);
+  font-size: 2.5rem;
+}
+.cv_subscribe{
+    background-color: var(--primarycolor);
+    color: var(--lightcolor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    transition:0.4s;
+    border: 2px solid transparent;
+}
+.cv_subscribe:hover{
+    background-color:transparent;
+    border: 2px solid var(--primarycolor);
+    filter: drop-shadow(5px 4px 15px   #4ec5fc );
+}
+.social{
+    margin-top: 3.5rem;
+}
+.social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+.social img:hover{
+   transform: scale(1.3);
+  filter: drop-shadow(1px 1px 20px   #ffffff )
+}
+.home .content{
+    flex-grow: 1;
+    padding: 0rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .content-text{
+    position: relative;
+    bottom: 70px;
+}
+.image-back{
+
+    margin: 14px 20%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primarycolor);
+    position: relative;
+    border-radius: 50%;
+}
+.image-back::after{
+    content: "";
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    transform: scale(1.1);
+    border: 10px solid;
+    border-color: var(--primarycolor) var(--bgcolor2) ;
+    border-color:var(--lightcolor) var(--bgcolor1) ;
+    animation-name: durmadan-don-after ;
+    animation-duration:10s;
+    animation-iteration-count:infinite ;
+    animation-timing-function:linear;
+    animation-play-state: running;
+
+}
+.image-back::before{
+    content: "";
+    width: 125%;
+    height: 125%;
+    position:absolute;
+    border-radius: 50%;
+    border: 10px solid;
+    border-color: var(--primarycolor) var(--bgcolor2) ;
+    animation-name: durmadan-don ;
+    animation-duration:10s;
+    animation-iteration-count:infinite ;
+    animation-timing-function:linear;
+    animation-play-state: running;
+}
+.home .content-images{
+    position: relative; 
+    width: 45%;
+    height: 90%;  
+    align-self: flex-end;
+}
+.home .content-images img {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    height: 110%;
+    left: 56%;
+    transform:translateX(-50%);
+    transition: 1s;
+}
+@keyframes  durmadan-don{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        
+    }
+}
+@keyframes  durmadan-don-after{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.content-images:hover .my-photo{
+  opacity: 90%;
+  filter: drop-shadow(10px 10px 50px   #358fb9 );
+}
+/***********************************************************
+***********************************ABOUT SECTİON
+*************************************************************/
+.about{
+    background-color: var(--bgcolor2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .content-images {
+    width: 35%;
+}
+.about .content-images img{
+    width: 100%;
+    transition: 1s;
+}
+.mico:hover{
+  transform: skew(2deg);
+  transform: scale(1.2,1.2);
+  filter: drop-shadow(10px 10px 150px   #358fb9 );
+}
+.about .content-text {
+    width: 35%;
+}
+/***********************************************************
+***********************************SERVİSEC SECTİON
+*************************************************************/
+.texet-center{
+    text-align: center;
+}
+
+.servisec{
+    background-color:var(--bgcolor1);
+    padding: 10PX;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    background-color:var(--bgcolor2);
+    width: 300px;
+    border-radius: 20px;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    margin-left: 15PX;
+    margin-bottom: 80PX;
+    transition: 1s;
+    border: 1px solid;
+}
+.card i{
+    font-size: 3.12em;
+    margin: 2rem;
+    color: var(--primarycolor);
+}
+.card:hover{
+opacity: 60%;
+filter: drop-shadow(10px 10px 50px   #358fb9 );
+transform: skew(1deg,1deg);
+}
+/***********************************************************
+***********************************SKİLLS SECTİON
+*************************************************************/
+.skills{
+    background-color: var(--bgcolor2);
+    padding: 4rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.skills .content-images {
+    width: 35%;
+}
+.skills .content-images img{
+    width: 90%;
+}
+.skills .content-Skills {
+    width: 50%;
+}
+.content-Skills{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem ;
+}
+.skill{
+    width: 80px;
+    height:80px;
+    margin: 0 2rem 2rem 0;
+    border-radius: 50%;
+    background-color:var(--lightcolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.skill:hover{
+  transform: scale(1.4) rotate(-1deg);
+  opacity: 50%;
+  filter: drop-shadow(1px 1px 20px   #ffffff )
+  }
+.work{
+  transition: 1s;
+}
+.work:hover{
+transform: skew(2deg);
+transform: scale(1.2,1.2);
+filter: drop-shadow(10px 40px 100px   #358fb9 )
+} 
+/******************************************************************************
+***********************************FOOTER SECTİON
+*****************************************************************************/
+footer{
+padding: 2rem var(--padding);
+background-color: var(--bgcolor1);
+}
+footer.content-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-footer h2,h4{
+    color: var(--primarycolor);
+}
+/****************************************************************************
+***********************************HUMBERGER MENU 
+******************************************************************************/
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu span{
+    display: block;
+    background-color:  var(--lightcolor);
+    width: 33px;
+    height: 4px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+    transform-origin:0 0 ;
+    position: relative;
+}
+#menu.is-active span:nth-child(1) {
+  transform: translate(10px,1px) rotate(90deg);
+  }
+#menu.is-active span:nth-child(2) {
+        transform: translate(20px,-20px) rotate(90deg);
+        }
+#menu.is-active span:nth-child(3) {
+        transform: translate(-3px,6px) rotate(-90deg);
+        }
+#menu.is-active span{
+    background-color: var(--primarycolor);
+    }
+/****************************************************************************
+***********************************MEDIA QUERTES SECTİON
+******************************************************************************/
+@media screen and (max-width: 575px){
+:root{
+    --padding: 1rem;
+}
+html{
+    font-size: 13px;
+}
+h3{
+    font-size: 30px;
+}
+.text-center{
+    text-align: center;
+}
+span{
+  font-size: 60px;
+}   
+.cv_subscribe{
+    margin-left: 30%;
+}
+.social{
+    margin-left: 15%;
+}
+.content-images,nav .cv_subscribe{
+display: none;
+}
+nav{
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height:62px;
+    padding-top: 15px;
+    background-color: var(--bgcolor1);
+    border-bottom: 2px solid var(--bgcolor2);
+    z-index:100 ;
+}
+nav ul {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background:var(--bgcolor2);
+    top: 0;
+    left: 0;
+    display: none;
+}
+nav ul.is-active{
+    display: block;
+}
+nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    height: 70px;
+}
+#menu{
+    display: block;
+}
+/****************************************************************************
+***********************************ABOUT SECTİON
+******************************************************************************/
+.about.content-images{
+    display: none;
+}
+.about .content-text{
+    width: 100%;
+}
+/***************************************************************
+***********************************card SECTİON
+*******************************************************************/
+.box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-left: 5%;
+}
+h1.texet-center{
+    font-size: 40px;
+    margin-bottom:  30px;
+}
+/************************************skills SECTİON
+******************************************************************/
+.skills .content-images{
+    display: none;
+} 
+.skills
+.content-Skills{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.continer-Skills h1,span{
+  font-size: 60px;
+  margin-bottom:  10px;
+  text-align:center;
+}
+/************************************FOOTER SECTİON
+******************************************************************/
+.content-footer{
+    width: 100%;
+}
+}
+/****************************************************************************
+***********************************MEDIA QUERTES SECTİON
+******************************************************************************/
+@media screen and (min-width: 576px) and (max-width:767px ){
+:root{
+    --padding: 1rem;
+}
+html{
+font-size: 13px;
+}
+.home{
+    height: 400px;
+}
+.content .content-text h4{
+    margin-top: 145px;
+}
+.content .content-text h1{
+    margin-left: 150px;
+}
+ h2,h1,h5{
+    text-align: center;
+}
+span{
+    font-size: 60px;
+}   
+.cv_subscribe{
+    margin-left: 40%;
+}
+.social{
+    margin-left: 35%;
+}
+.content-images,nav .cv_subscribe{
+display: none;
+}
+nav{
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height:62px;
+    padding-top: 15px;
+    background-color: var(--bgcolor1);
+    border-bottom: 2px solid var(--bgcolor2);
+    z-index:100 ;
+}
+nav ul {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background:var(--bgcolor2);
+    top: 0;
+    left: 0;
+    display: none;
+}
+nav ul.is-active{
+        display: block;
+}
+nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    height: 70px;
+}
+#menu{
+    display: block;
+}
+/****************************************************************************
+***********************************ABOUT SECTİON
+******************************************************************************/
+.about.content-images{
+    display: none;
+}
+.about .content-text{
+    width: 100%;
+}
+/***************************************************************
+***********************************card SECTİON
+*******************************************************************/
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1px;
+    margin-left: 0%;
+}
+h1.texet-center{
+font-size: 40px;
+margin-bottom:  30px;
+}
+/************************************skills SECTİON
+******************************************************************/
+.skills .content-images{
+display: none;
+
+}
+.skills
+.content-Skills{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.continer-Skills h1,span{
+font-size: 60px;
+margin-bottom:  10px;
+text-align:center;
+}
+/************************************FOOTER SECTİON
+******************************************************************/
+.content-footer{
+width: 100%;
+}
+}
